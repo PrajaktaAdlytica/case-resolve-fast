@@ -81,9 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Bankza helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, disputes and compliance cases from one intelligent operations platform." },
       { name: "author", content: "Bankza" },
       { property: "og:title", content: "Bankza — Operations platform for fintechs and neobanks" },
-      { property: "og:description", content: "Resolve compliance cases at operational speed with unified case management, AI summaries and SLA monitoring." },
+      { property: "og:description", content: "Bankza helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, disputes and compliance cases from one intelligent operations platform." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Bankza — Operations platform for fintechs and neobanks" },
+      { name: "twitter:description", content: "Bankza helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, disputes and compliance cases from one intelligent operations platform." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8e94392b-1cad-4c37-be38-52f7214c1e0b/id-preview-2a755174--2fa50f8c-6c07-408d-8ea7-c6e750a3d4b9.lovable.app-1782981308395.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8e94392b-1cad-4c37-be38-52f7214c1e0b/id-preview-2a755174--2fa50f8c-6c07-408d-8ea7-c6e750a3d4b9.lovable.app-1782981308395.png" },
     ],
     links: [
       {
