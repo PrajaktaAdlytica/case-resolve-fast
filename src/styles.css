@@ -259,5 +259,4 @@
 @utility animate-flow-line {
   stroke-dasharray: 6 6;
   animation: flow-line 2.5s linear infinite;
-  }
 }
