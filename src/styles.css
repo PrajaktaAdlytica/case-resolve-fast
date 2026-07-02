@@ -4,6 +4,28 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Bankza design tokens — Stripe-inspired */
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, "SF Pro Display", sans-serif;
+  --color-ink: #0d253d;
+  --color-ink-secondary: #273951;
+  --color-ink-mute: #64748d;
+  --color-ink-mute-2: #61718a;
+  --color-brand-primary: #533afd;
+  --color-brand-primary-deep: #4434d4;
+  --color-brand-primary-press: #2e2b8c;
+  --color-brand-primary-soft: #665efd;
+  --color-brand-primary-subdued: #b9b9f9;
+  --color-brand-dark-900: #1c1e54;
+  --color-brand-ruby: #ea2261;
+  --color-brand-magenta: #f96bee;
+  --color-brand-lemon: #9b6829;
+  --color-canvas-soft: #f6f9fc;
+  --color-canvas-cream: #f5e9d4;
+  --color-hairline: #e3e8ee;
+  --color-hairline-input: #a8c3de;
+}
+
 /*
  * Design system definition.
  *
@@ -64,12 +86,12 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.216 0.06 250);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.216 0.06 250);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.216 0.06 250);
+  --primary: oklch(0.505 0.267 279);
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
@@ -140,5 +162,102 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01";
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    color: var(--color-ink);
+  }
+  html { scroll-behavior: smooth; }
+}
+
+@utility tnum {
+  font-feature-settings: "tnum", "ss01";
+  letter-spacing: -0.42px;
+}
+
+@utility btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 9999px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  transition: all 0.18s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@utility btn-primary {
+  background: var(--color-brand-primary);
+  color: #ffffff;
+  &:hover { background: var(--color-brand-primary-deep); transform: translateY(-1px); }
+  &:active { background: var(--color-brand-primary-press); }
+}
+
+@utility btn-secondary {
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-hairline);
+  &:hover { border-color: var(--color-brand-primary); color: var(--color-brand-primary); }
+}
+
+@utility btn-on-dark {
+  background: #ffffff;
+  color: var(--color-brand-dark-900);
+  &:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
+}
+
+@utility gradient-mesh {
+  background:
+    radial-gradient(ellipse 60% 80% at 10% 20%, #f5e9d4 0%, transparent 55%),
+    radial-gradient(ellipse 55% 75% at 30% 30%, #ffb98a 0%, transparent 55%),
+    radial-gradient(ellipse 55% 80% at 55% 25%, #c9b9ff 0%, transparent 55%),
+    radial-gradient(ellipse 55% 80% at 75% 40%, #665efd 0%, transparent 55%),
+    radial-gradient(ellipse 55% 80% at 95% 30%, #ea2261 0%, transparent 55%),
+    linear-gradient(180deg, #fef8ef 0%, #ffffff 100%);
+}
+
+@utility hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,55,112,0.08), 0 2px 6px rgba(0,55,112,0.04);
+    border-color: var(--color-brand-primary) !important;
+  }
+}
+
+@utility card-base {
+  background: #ffffff;
+  border: 1px solid var(--color-hairline);
+  border-radius: 12px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@utility animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.4); }
+}
+@utility animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes flow-line {
+  0% { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+@utility animate-flow-line {
+  stroke-dasharray: 6 6;
+  animation: flow-line 2.5s linear infinite;
   }
 }
