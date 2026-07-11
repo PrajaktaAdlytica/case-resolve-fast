@@ -90,7 +90,7 @@ const cards: Card[] = [
   {
     id: "cases",
     badge: "Case management",
-    title: "Bankza Cases",
+    title: "Bankxio Cases",
     desc: "Manage every operational case from a single workspace. Track KYC exceptions, transaction alerts, disputes, complaints and investigations without switching between systems.",
     features: ["Unified case queue", "Case assignment", "Timeline history"],
     href: "/products/cases",
@@ -100,7 +100,7 @@ const cards: Card[] = [
   {
     id: "summaries",
     badge: "AI insights",
-    title: "Bankza Summaries",
+    title: "Bankxio Summaries",
     desc: "Turn complex investigations into clear operational summaries. AI automatically generates concise case summaries while preserving the complete investigation history.",
     features: ["AI summaries", "Timeline extraction", "Decision highlights"],
     href: "/products/summaries",
@@ -109,7 +109,7 @@ const cards: Card[] = [
   {
     id: "sla",
     badge: "Deadline monitoring",
-    title: "Bankza SLA",
+    title: "Bankxio SLA",
     desc: "Never miss another operational deadline. Monitor response times with configurable SLAs, escalation rules and queue monitoring.",
     features: ["SLA timers", "Queue monitoring", "Escalation rules"],
     href: "/products/sla",

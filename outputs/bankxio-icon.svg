@@ -1,0 +1,10 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Bankxio Icon</title>
+  <desc id="desc">Financial operations control tile with a subtle X negative space.</desc>
+  <rect x="40" y="40" width="432" height="432" rx="116" fill="#1C1E54"/>
+  <path d="M166 158C166 139.222 181.222 124 200 124H312C330.778 124 346 139.222 346 158V354C346 372.778 330.778 388 312 388H200C181.222 388 166 372.778 166 354V158Z" fill="#F6F9FC"/>
+  <path d="M220 124H312C330.778 124 346 139.222 346 158V256H220V124Z" fill="#533AFD"/>
+  <path d="M166 256H290V388H200C181.222 388 166 372.778 166 354V256Z" fill="#533AFD"/>
+  <path d="M214 176L298 260M298 176L214 260" stroke="#1C1E54" stroke-width="34" stroke-linecap="round"/>
+  <path d="M214 176L298 260" stroke="#F6F9FC" stroke-width="15" stroke-linecap="round"/>
+</svg>

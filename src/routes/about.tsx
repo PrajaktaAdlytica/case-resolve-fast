@@ -5,9 +5,9 @@ import { GradientMesh } from "@/components/site/GradientMesh";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Bankza — Modern operations for financial institutions" },
-      { name: "description", content: "Bankza builds the operations platform used by fintechs, neobanks, lenders and payment institutions across Europe." },
-      { property: "og:title", content: "About Bankza" },
+      { title: "About Bankxio — Modern operations for financial institutions" },
+      { name: "description", content: "Bankxio builds the operations platform used by fintechs, neobanks, lenders and payment institutions across Europe." },
+      { property: "og:title", content: "About Bankxio" },
       { property: "og:description", content: "Building the operations platform for modern financial institutions." },
     ],
   }),
@@ -25,7 +25,7 @@ function About() {
             Building the operations platform for modern financial institutions.
           </h1>
           <p className="mt-6 text-[17px] leading-[1.55] text-[color:var(--color-ink-secondary)]">
-            Bankza is an Odra Venture company headquartered in Warsaw. We help fintechs, neobanks, lenders and payment institutions across Europe run their compliance and operations teams on a single, intelligent workspace.
+            Bankxio is an Odra Venture company headquartered in Warsaw. We help fintechs, neobanks, lenders and payment institutions across Europe run their compliance and operations teams on a single, intelligent workspace.
           </p>
           <div className="mt-8 flex justify-center gap-3">
             <Link to="/request-demo" className="btn-pill btn-primary">Request Demo</Link>

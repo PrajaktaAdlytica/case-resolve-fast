@@ -6,9 +6,9 @@ import { DashboardMockup } from "@/components/site/DashboardMockup";
 export const Route = createFileRoute("/products/sla")({
   head: () => ({
     meta: [
-      { title: "Bankza SLA — Deadline monitoring for operations teams" },
+      { title: "Bankxio SLA — Deadline monitoring for operations teams" },
       { name: "description", content: "Monitor response times with configurable SLAs, escalation rules and real-time queue monitoring." },
-      { property: "og:title", content: "Bankza SLA — Deadline monitoring for operations teams" },
+      { property: "og:title", content: "Bankxio SLA — Deadline monitoring for operations teams" },
       { property: "og:description", content: "Never miss another operational deadline. SLA timers, escalations and queue analytics." },
     ],
   }),
@@ -52,12 +52,12 @@ function Page() {
   return (
     <SiteShell>
       <ProductPage
-        eyebrow="Bankza SLA"
+        eyebrow="Bankxio SLA"
         title="Never miss another operational deadline."
-        description="Bankza SLA gives operations leaders live visibility on response times, escalations and workload — with configurable rules per case type, team and priority."
+        description="Bankxio SLA gives operations leaders live visibility on response times, escalations and workload — with configurable rules per case type, team and priority."
         heroVisual={<SlaHero />}
         overviewTitle="Real-time deadline monitoring across every queue."
-        overviewBody="Set SLA targets per case type and priority, define escalation chains, and let Bankza monitor every deadline in real time. Managers see risk before it becomes a breach; investigators see what needs their attention next."
+        overviewBody="Set SLA targets per case type and priority, define escalation chains, and let Bankxio monitor every deadline in real time. Managers see risk before it becomes a breach; investigators see what needs their attention next."
         features={[
           { title: "SLA timers", body: "Countdown timers on every case with clear time-to-breach visibility." },
           { title: "Queue monitoring", body: "Live health metrics per queue, team and case type." },

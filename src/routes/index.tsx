@@ -48,7 +48,7 @@ function Hero() {
             Resolve compliance cases at operational speed.
           </h1>
           <p className="mt-6 text-[17px] leading-[1.5] text-[color:var(--color-ink-secondary)] max-w-xl">
-            Bankza helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, customer disputes, complaints and compliance queues from one intelligent operations platform.
+            Bankxio helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, customer disputes, complaints and compliance queues from one intelligent operations platform.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link to="/request-demo" className="btn-pill btn-primary">Request Demo</Link>
@@ -127,7 +127,7 @@ function Solution() {
             One workspace for every operational case.
           </h2>
           <p className="mt-5 text-[16px] leading-[1.55] text-[color:var(--color-ink-mute)] max-w-lg">
-            Bankza centralises case management, AI-generated summaries and SLA monitoring into one unified platform so operations teams can investigate, collaborate and resolve issues faster.
+            Bankxio centralises case management, AI-generated summaries and SLA monitoring into one unified platform so operations teams can investigate, collaborate and resolve issues faster.
           </p>
           <ul className="mt-6 space-y-3">
             {["Unified queue across every case type", "AI summaries surface the next best action", "SLA automation with escalation paths", "Complete audit-ready investigation history"].map((f) => (
@@ -190,7 +190,7 @@ function Integrations() {
             Connect to your existing operations stack.
           </h2>
           <p className="mt-5 text-[16px] leading-[1.55] text-[color:var(--color-ink-mute)]">
-            Bankza works alongside your existing financial systems so your teams never need to change how they operate.
+            Bankxio works alongside your existing financial systems so your teams never need to change how they operate.
           </p>
         </div>
         <IntegrationDiagram />
@@ -326,7 +326,7 @@ function Testimonial() {
       <div className="max-w-[900px] mx-auto px-6 text-center">
         <div className="text-[11px] uppercase tracking-[0.12em] text-[color:var(--color-brand-primary-deep)] mb-6">Testimonial</div>
         <blockquote className="text-[28px] md:text-[34px] font-light leading-[1.35] text-[color:var(--color-ink)]" style={{ letterSpacing: "-0.6px" }}>
-          &ldquo;Bankza transformed how our operations team manages compliance cases. Investigations that previously required multiple systems are now completed from one unified workspace, significantly reducing response times.&rdquo;
+          &ldquo;Bankxio transformed how our operations team manages compliance cases. Investigations that previously required multiple systems are now completed from one unified workspace, significantly reducing response times.&rdquo;
         </blockquote>
         <div className="mt-8 flex items-center justify-center gap-3">
           <div className="w-11 h-11 rounded-full flex items-center justify-center text-white font-light" style={{ background: "linear-gradient(135deg,#533afd,#ea2261)" }}>AK</div>
@@ -342,9 +342,9 @@ function Testimonial() {
 
 function FAQ() {
   const faqs = [
-    { q: "What types of cases can Bankza manage?", a: "Bankza supports KYC exceptions, transaction alerts, customer disputes, complaints, fraud investigations and operational compliance workflows." },
-    { q: "Does Bankza integrate with existing banking systems?", a: "Yes. Bankza connects with core banking platforms, KYC providers, AML systems, CRMs, customer support platforms and payment processors." },
-    { q: "How do AI summaries work?", a: "Bankza automatically generates concise summaries from case activity while maintaining complete audit history." },
+    { q: "What types of cases can Bankxio manage?", a: "Bankxio supports KYC exceptions, transaction alerts, customer disputes, complaints, fraud investigations and operational compliance workflows." },
+    { q: "Does Bankxio integrate with existing banking systems?", a: "Yes. Bankxio connects with core banking platforms, KYC providers, AML systems, CRMs, customer support platforms and payment processors." },
+    { q: "How do AI summaries work?", a: "Bankxio automatically generates concise summaries from case activity while maintaining complete audit history." },
     { q: "Can SLA rules be customised?", a: "Yes. Teams can define response targets, escalation rules and priority levels." },
   ];
   return (
@@ -378,7 +378,7 @@ function FinalCTA() {
           Modernise your financial operations.
         </h2>
         <p className="mt-5 text-[17px] text-white/70 max-w-2xl mx-auto">
-          See how Bankza helps operations teams resolve compliance cases faster with intelligent workflows, AI summaries and real-time SLA management.
+          See how Bankxio helps operations teams resolve compliance cases faster with intelligent workflows, AI summaries and real-time SLA management.
         </p>
         <div className="mt-8 flex justify-center gap-3">
           <Link to="/request-demo" className="btn-pill btn-on-dark">Request Demo</Link>

@@ -74,7 +74,7 @@ export function ProductPage(p: ProductPageProps) {
       <section className="py-24 bg-[color:var(--color-canvas-cream)]">
         <div className="max-w-[1200px] mx-auto px-6">
           <h2 className="text-[32px] md:text-[38px] font-light text-[color:var(--color-ink)] mb-12" style={{ letterSpacing: "-0.7px" }}>
-            Why teams choose Bankza
+            Why teams choose Bankxio
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {p.benefits.map((b) => (

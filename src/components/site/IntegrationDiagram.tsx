@@ -32,7 +32,7 @@ export function IntegrationDiagram() {
         <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg" style={{ background: "linear-gradient(135deg, #533afd, #ea2261)" }}>
           <span className="text-[13px] font-medium">B</span>
         </span>
-        <span className="text-[15px]">Bankza Operations Platform</span>
+        <span className="text-[15px]">Bankxio Operations Platform</span>
       </div>
       <div className="my-8 flex justify-center">
         <div className="w-px h-10 bg-gradient-to-b from-transparent via-[color:var(--color-brand-primary)] to-transparent" />

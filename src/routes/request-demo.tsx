@@ -6,10 +6,10 @@ import { Check } from "lucide-react";
 export const Route = createFileRoute("/request-demo")({
   head: () => ({
     meta: [
-      { title: "Request a demo — Bankza" },
-      { name: "description", content: "Book a personalised walkthrough of the Bankza operations platform." },
-      { property: "og:title", content: "Request a demo — Bankza" },
-      { property: "og:description", content: "See Bankza in action with a personalised platform walkthrough." },
+      { title: "Request a demo — Bankxio" },
+      { name: "description", content: "Book a personalised walkthrough of the Bankxio operations platform." },
+      { property: "og:title", content: "Request a demo — Bankxio" },
+      { property: "og:description", content: "See Bankxio in action with a personalised platform walkthrough." },
     ],
   }),
   component: RequestDemo,
@@ -24,7 +24,7 @@ function RequestDemo() {
           <div>
             <div className="text-[11px] uppercase tracking-[0.12em] text-[color:var(--color-brand-primary-deep)] mb-3">Request demo</div>
             <h1 className="text-[40px] md:text-[52px] leading-[1.05] font-light text-[color:var(--color-ink)]" style={{ letterSpacing: "-1.4px" }}>
-              See Bankza in action.
+              See Bankxio in action.
             </h1>
             <p className="mt-5 text-[16px] leading-[1.55] text-[color:var(--color-ink-secondary)] max-w-md">
               A 30-minute personalised walkthrough of the operations platform, tailored to how your team manages compliance cases today.
@@ -32,7 +32,7 @@ function RequestDemo() {
             <ul className="mt-8 space-y-3">
               {[
                 "Live demo of case management, AI summaries and SLA monitoring",
-                "Q&A with a Bankza operations specialist",
+                "Q&A with a Bankxio operations specialist",
                 "Custom-fit review of your workflows and integrations",
                 "No credit card, no commitment",
               ].map((b) => (
@@ -46,7 +46,7 @@ function RequestDemo() {
             </ul>
             <div className="mt-10 card-base p-6 bg-white/80 backdrop-blur">
               <blockquote className="text-[15px] leading-[1.5] text-[color:var(--color-ink)]">
-                &ldquo;Bankza transformed how our operations team manages compliance cases. Investigations now happen in one workspace.&rdquo;
+                &ldquo;Bankxio transformed how our operations team manages compliance cases. Investigations now happen in one workspace.&rdquo;
               </blockquote>
               <div className="mt-4 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-[13px]" style={{ background: "linear-gradient(135deg,#533afd,#ea2261)" }}>AK</div>

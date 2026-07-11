@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Bankza design tokens — Stripe-inspired */
+/* Bankxio design tokens — Stripe-inspired */
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, "SF Pro Display", sans-serif;
   --color-ink: #0d253d;

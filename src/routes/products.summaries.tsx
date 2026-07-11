@@ -7,9 +7,9 @@ import { Sparkles } from "lucide-react";
 export const Route = createFileRoute("/products/summaries")({
   head: () => ({
     meta: [
-      { title: "Bankza Summaries — AI summaries for compliance cases" },
+      { title: "Bankxio Summaries — AI summaries for compliance cases" },
       { name: "description", content: "Turn complex investigations into concise operational summaries generated automatically from case activity." },
-      { property: "og:title", content: "Bankza Summaries — AI summaries for compliance cases" },
+      { property: "og:title", content: "Bankxio Summaries — AI summaries for compliance cases" },
       { property: "og:description", content: "AI-generated case summaries with decision highlights and full audit history preserved." },
     ],
   }),
@@ -48,12 +48,12 @@ function Page() {
   return (
     <SiteShell>
       <ProductPage
-        eyebrow="Bankza Summaries"
+        eyebrow="Bankxio Summaries"
         title="Turn complex investigations into clear summaries."
-        description="Bankza Summaries reads across a case timeline and produces a concise operational summary — key events, decisions and recommendations — while preserving the complete investigation history."
+        description="Bankxio Summaries reads across a case timeline and produces a concise operational summary — key events, decisions and recommendations — while preserving the complete investigation history."
         heroVisual={<SummaryHero />}
         overviewTitle="Faster decisions, without losing the audit trail."
-        overviewBody="Investigations often involve dozens of events and notes. Bankza Summaries condenses them into a decision-ready brief that any reviewer or approver can act on in seconds — with a single click to expand the underlying evidence."
+        overviewBody="Investigations often involve dozens of events and notes. Bankxio Summaries condenses them into a decision-ready brief that any reviewer or approver can act on in seconds — with a single click to expand the underlying evidence."
         features={[
           { title: "AI summaries", body: "Concise briefs generated from case activity, updated as new events arrive." },
           { title: "Timeline extraction", body: "Key events surfaced automatically with links back to source records." },
@@ -69,9 +69,9 @@ function Page() {
           "Improve regulator responses with clear, structured narratives.",
         ]}
         faqs={[
-          { q: "Which LLM powers Bankza Summaries?", a: "Bankza uses enterprise-grade models hosted in EU regions with strict data-processing agreements." },
+          { q: "Which LLM powers Bankxio Summaries?", a: "Bankxio uses enterprise-grade models hosted in EU regions with strict data-processing agreements." },
           { q: "Do summaries replace investigator judgement?", a: "No. Summaries assist reviewers — every decision is still owned by your operations team, with full evidence available." },
-          { q: "Is customer data used to train models?", a: "No. Bankza Summaries runs on tenant-isolated inference and does not use your data for training." },
+          { q: "Is customer data used to train models?", a: "No. Bankxio Summaries runs on tenant-isolated inference and does not use your data for training." },
           { q: "Can summaries be customised per case type?", a: "Yes. Templates and tone-of-voice can be configured per team and case type." },
         ]}
         dashboardMockup={<DashboardMockup />}

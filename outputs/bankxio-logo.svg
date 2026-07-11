@@ -1,0 +1,13 @@
+<svg width="980" height="240" viewBox="0 0 980 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Bankxio Logo</title>
+  <desc id="desc">Bankxio wordmark with a calm financial operations control tile and subtle X negative space.</desc>
+  <g transform="translate(24 24)">
+    <rect x="0" y="0" width="192" height="192" rx="46" fill="#1C1E54"/>
+    <path d="M52 50C52 41.163 59.163 34 68 34H124C132.837 34 140 41.163 140 50V142C140 150.837 132.837 158 124 158H68C59.163 158 52 150.837 52 142V50Z" fill="#F6F9FC"/>
+    <path d="M78 34H124C132.837 34 140 41.163 140 50V96H78V34Z" fill="#533AFD"/>
+    <path d="M52 96H114V158H68C59.163 158 52 150.837 52 142V96Z" fill="#533AFD"/>
+    <path d="M75 59L117 101M117 59L75 101" stroke="#1C1E54" stroke-width="14" stroke-linecap="round"/>
+    <path d="M75 59L117 101" stroke="#F6F9FC" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="270" y="150" fill="#0D253D" font-family="Inter, Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="104" font-weight="620" letter-spacing="-5">Bankxio</text>
+</svg>

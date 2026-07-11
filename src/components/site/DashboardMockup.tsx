@@ -7,7 +7,7 @@ export function DashboardMockup() {
         <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f57]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#febc2e]" />
         <span className="w-2.5 h-2.5 rounded-full bg-[#28c840]" />
-        <span className="ml-3 text-[11px] text-white/60 tracking-tight">app.bankza.io/operations</span>
+        <span className="ml-3 text-[11px] text-white/60 tracking-tight">app.bankxio.com/operations</span>
       </div>
       <div className="p-6 bg-white">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">

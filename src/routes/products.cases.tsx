@@ -7,9 +7,9 @@ import { FileText } from "lucide-react";
 export const Route = createFileRoute("/products/cases")({
   head: () => ({
     meta: [
-      { title: "Bankza Cases — Unified operational case management" },
+      { title: "Bankxio Cases — Unified operational case management" },
       { name: "description", content: "Manage every KYC exception, transaction alert, dispute and complaint from a single operational workspace." },
-      { property: "og:title", content: "Bankza Cases — Unified operational case management" },
+      { property: "og:title", content: "Bankxio Cases — Unified operational case management" },
       { property: "og:description", content: "One queue for every operational case. Assign, investigate and resolve without switching systems." },
     ],
   }),
@@ -55,12 +55,12 @@ function Page() {
   return (
     <SiteShell>
       <ProductPage
-        eyebrow="Bankza Cases"
+        eyebrow="Bankxio Cases"
         title="Every operational case, one workspace."
         description="Track KYC exceptions, transaction alerts, disputes, complaints and investigations from a single unified queue — with the full timeline, evidence and decisions in one place."
         heroVisual={<CaseHero />}
         overviewTitle="A single operational queue built for financial teams."
-        overviewBody="Bankza Cases replaces the tangle of spreadsheets, shared inboxes and ticketing tools with one purpose-built workspace. Assign work, collaborate across compliance, fraud and support teams, and keep a complete audit-ready record of every decision."
+        overviewBody="Bankxio Cases replaces the tangle of spreadsheets, shared inboxes and ticketing tools with one purpose-built workspace. Assign work, collaborate across compliance, fraud and support teams, and keep a complete audit-ready record of every decision."
         features={[
           { title: "Unified case queue", body: "One inbox for KYC, AML, disputes, complaints and internal investigations." },
           { title: "Smart assignment", body: "Route cases automatically based on skill, workload and priority." },
@@ -78,7 +78,7 @@ function Page() {
         faqs={[
           { q: "Which case types are supported?", a: "KYC exceptions, transaction alerts, customer disputes, complaints, chargebacks and internal investigations — with custom types available." },
           { q: "Can multiple teams work on the same case?", a: "Yes. Cases support shared ownership across compliance, fraud, support and legal teams with granular permissions." },
-          { q: "Is Bankza Cases suitable for regulated institutions?", a: "Yes. Every action is logged with actor, timestamp and reason. Exports are audit-ready." },
+          { q: "Is Bankxio Cases suitable for regulated institutions?", a: "Yes. Every action is logged with actor, timestamp and reason. Exports are audit-ready." },
           { q: "Can I import existing case history?", a: "Yes. We provide CSV and API-based import from legacy tools and spreadsheets." },
         ]}
         dashboardMockup={<DashboardMockup />}

@@ -6,10 +6,10 @@ import { GradientMesh } from "@/components/site/GradientMesh";
 export const Route = createFileRoute("/signin")({
   head: () => ({
     meta: [
-      { title: "Sign in — Bankza" },
-      { name: "description", content: "Sign in to your Bankza operations workspace." },
-      { property: "og:title", content: "Sign in — Bankza" },
-      { property: "og:description", content: "Access your Bankza operations workspace." },
+      { title: "Sign in — Bankxio" },
+      { name: "description", content: "Sign in to your Bankxio operations workspace." },
+      { property: "og:title", content: "Sign in — Bankxio" },
+      { property: "og:description", content: "Access your Bankxio operations workspace." },
     ],
   }),
   component: SignIn,
@@ -24,7 +24,7 @@ function SignIn() {
           <div className="card-base p-10 shadow-[0_30px_80px_rgba(0,55,112,0.1)]">
             <div className="flex justify-center mb-6"><Logo /></div>
             <h1 className="text-[28px] font-light text-center text-[color:var(--color-ink)]" style={{ letterSpacing: "-0.5px" }}>Welcome back</h1>
-            <p className="mt-2 text-[14px] text-center text-[color:var(--color-ink-mute)]">Sign in to continue to your Bankza operations workspace.</p>
+            <p className="mt-2 text-[14px] text-center text-[color:var(--color-ink-mute)]">Sign in to continue to your Bankxio operations workspace.</p>
             <form className="mt-8 space-y-4">
               <Field label="Work email" type="email" placeholder="you@company.com" />
               <Field label="Password" type="password" placeholder="••••••••" />

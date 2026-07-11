@@ -4,9 +4,9 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 const products = [
-  { name: "Bankza Cases", to: "/products/cases", desc: "Unified case management" },
-  { name: "Bankza Summaries", to: "/products/summaries", desc: "AI-generated case summaries" },
-  { name: "Bankza SLA", to: "/products/sla", desc: "Response deadline monitoring" },
+  { name: "Bankxio Cases", to: "/products/cases", desc: "Unified case management" },
+  { name: "Bankxio Summaries", to: "/products/summaries", desc: "AI-generated case summaries" },
+  { name: "Bankxio SLA", to: "/products/sla", desc: "Response deadline monitoring" },
 ] as const;
 
 export function Navbar() {

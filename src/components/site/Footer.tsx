@@ -5,9 +5,9 @@ const cols = [
   {
     title: "Products",
     links: [
-      { label: "Bankza Cases", to: "/products/cases" },
-      { label: "Bankza Summaries", to: "/products/summaries" },
-      { label: "Bankza SLA", to: "/products/sla" },
+      { label: "Bankxio Cases", to: "/products/cases" },
+      { label: "Bankxio Summaries", to: "/products/summaries" },
+      { label: "Bankxio SLA", to: "/products/sla" },
     ],
   },
   {
@@ -63,13 +63,13 @@ export function Footer() {
             <div className="text-[11px] uppercase tracking-[0.1em] text-[color:var(--color-ink-mute)] font-medium mb-4">Contact</div>
             <ul className="space-y-2.5 text-[14px] text-[color:var(--color-ink)]">
               <li>Warsaw, Poland</li>
-              <li><a href="mailto:contact@bankza.io" className="hover:text-[color:var(--color-brand-primary)] transition-colors">contact@bankza.io</a></li>
+              <li><a href="mailto:contact@bankxio.com" className="hover:text-[color:var(--color-brand-primary)] transition-colors">contact@bankxio.com</a></li>
               <li className="tnum">+48 22 000 0000</li>
             </ul>
           </div>
         </div>
         <div className="mt-14 pt-6 border-t border-[color:var(--color-hairline)] flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="text-[13px] text-[color:var(--color-ink-mute)]">© 2026 Bankza. All rights reserved.</p>
+          <p className="text-[13px] text-[color:var(--color-ink-mute)]">© 2026 Bankxio. All rights reserved.</p>
           <div className="flex items-center gap-6 text-[13px] text-[color:var(--color-ink-mute)]">
             <a href="#" className="hover:text-[color:var(--color-brand-primary)] transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-[color:var(--color-brand-primary)] transition-colors">Terms of Service</a>
