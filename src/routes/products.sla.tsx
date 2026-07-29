@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { ProductPage } from "@/components/site/ProductPage";
 import { DashboardMockup } from "@/components/site/DashboardMockup";
+import { ProductDepth } from "@/components/site/ProductDepth";
 
 export const Route = createFileRoute("/products/sla")({
   head: () => ({
@@ -58,6 +59,7 @@ function Page() {
         heroVisual={<SlaHero />}
         overviewTitle="Real-time deadline monitoring across every queue."
         overviewBody="Set SLA targets per case type and priority, define escalation chains, and let Bankxio monitor every deadline in real time. Managers see risk before it becomes a breach; investigators see what needs their attention next."
+        afterOverview={<ProductDepth kind="sla" />}
         features={[
           { title: "SLA timers", body: "Countdown timers on every case with clear time-to-breach visibility." },
           { title: "Queue monitoring", body: "Live health metrics per queue, team and case type." },

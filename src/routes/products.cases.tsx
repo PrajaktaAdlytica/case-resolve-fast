@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { ProductPage } from "@/components/site/ProductPage";
 import { DashboardMockup } from "@/components/site/DashboardMockup";
+import { ProductDepth } from "@/components/site/ProductDepth";
 import { FileText } from "lucide-react";
 
 export const Route = createFileRoute("/products/cases")({
@@ -61,6 +62,7 @@ function Page() {
         heroVisual={<CaseHero />}
         overviewTitle="A single operational queue built for financial teams."
         overviewBody="Bankxio Cases replaces the tangle of spreadsheets, shared inboxes and ticketing tools with one purpose-built workspace. Assign work, collaborate across compliance, fraud and support teams, and keep a complete audit-ready record of every decision."
+        afterOverview={<ProductDepth kind="cases" />}
         features={[
           { title: "Unified case queue", body: "One inbox for KYC, AML, disputes, complaints and internal investigations." },
           { title: "Smart assignment", body: "Route cases automatically based on skill, workload and priority." },

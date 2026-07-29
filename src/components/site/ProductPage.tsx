@@ -14,6 +14,7 @@ export interface ProductPageProps {
   benefits: string[];
   faqs: { q: string; a: string }[];
   dashboardMockup: ReactNode;
+  afterOverview?: ReactNode;
 }
 
 export function ProductPage(p: ProductPageProps) {
@@ -51,6 +52,8 @@ export function ProductPage(p: ProductPageProps) {
           <div className="mt-12">{p.dashboardMockup}</div>
         </div>
       </section>
+
+      {p.afterOverview}
 
       <section className="py-24 bg-white">
         <div className="max-w-[1200px] mx-auto px-6">

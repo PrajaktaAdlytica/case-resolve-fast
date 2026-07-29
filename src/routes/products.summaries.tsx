@@ -2,7 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site/SiteShell";
 import { ProductPage } from "@/components/site/ProductPage";
 import { DashboardMockup } from "@/components/site/DashboardMockup";
-import { Sparkles } from "lucide-react";
+import { ProductDepth } from "@/components/site/ProductDepth";
+import { ArrowRight, BookOpenCheck, Database, FileCheck2, ShieldCheck, Sparkles, UserRoundCheck } from "lucide-react";
 
 export const Route = createFileRoute("/products/summaries")({
   head: () => ({
@@ -44,6 +45,94 @@ function SummaryHero() {
   );
 }
 
+function AITransparency() {
+  const safeguards = [
+    {
+      icon: BookOpenCheck,
+      title: "Grounded in case evidence",
+      body: "Every material statement links back to the event, document or note that supports it.",
+    },
+    {
+      icon: UserRoundCheck,
+      title: "Human decision ownership",
+      body: "Summaries prepare the case. Investigators review, edit and own every operational decision.",
+    },
+    {
+      icon: Database,
+      title: "No customer-data training",
+      body: "Tenant data is used only to generate the requested summary and is not used to train shared models.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Controlled enterprise inference",
+      body: "Model access, output history and reviewer actions remain logged inside the case record.",
+    },
+  ];
+
+  return (
+    <section id="ai-transparency" className="py-24 bg-[color:var(--color-brand-dark-900)] text-white overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="grid lg:grid-cols-[0.82fr_1.18fr] gap-12 lg:gap-16 items-start">
+          <div className="lg:sticky lg:top-28">
+            <div className="text-[11px] uppercase tracking-[0.12em] text-[#b9b9f9] mb-3">Responsible AI</div>
+            <h2 className="text-[36px] md:text-[44px] leading-[1.08] font-light" style={{ letterSpacing: "-1px" }}>
+              Clear about what the AI does — and what it never decides.
+            </h2>
+            <p className="mt-5 text-[16px] leading-[1.65] text-white/68 max-w-lg">
+              Bankxio Summaries turns case evidence into a reviewable draft. It does not replace policy, investigator judgement or maker-checker approval.
+            </p>
+            <div className="mt-8 rounded-xl border border-white/12 bg-white/6 p-5">
+              <div className="flex items-center gap-2 text-[12px] uppercase tracking-[0.09em] text-white/58">
+                <FileCheck2 className="w-4 h-4 text-[#b9b9f9]" />
+                Output contract
+              </div>
+              <p className="mt-3 text-[15px] leading-[1.55] text-white/88">
+                Draft summary + source citations + open questions + reviewer status
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div className="grid sm:grid-cols-2 gap-5">
+              {safeguards.map((item) => (
+                <div key={item.title} className="rounded-xl border border-white/12 bg-white/6 p-6">
+                  <span className="w-10 h-10 rounded-lg bg-white/9 flex items-center justify-center">
+                    <item.icon className="w-4.5 h-4.5 text-[#b9b9f9]" />
+                  </span>
+                  <h3 className="mt-5 text-[19px] font-light">{item.title}</h3>
+                  <p className="mt-2 text-[14px] leading-[1.6] text-white/62">{item.body}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-5 rounded-xl bg-white text-[color:var(--color-ink)] p-6 md:p-8">
+              <div className="text-[11px] uppercase tracking-[0.1em] text-[color:var(--color-brand-primary-deep)]">
+                Summary lifecycle
+              </div>
+              <div className="mt-5 grid md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-4 items-center">
+                {[
+                  ["01", "Evidence selected", "Only authorised case material"],
+                  ["02", "Draft generated", "Claims linked to their sources"],
+                  ["03", "Human reviewed", "Edits and approval are logged"],
+                ].map(([number, title, body], index) => (
+                  <div key={title} className="contents">
+                    <div className="rounded-lg bg-[color:var(--color-canvas-soft)] p-4">
+                      <div className="text-[10px] tnum text-[color:var(--color-ink-mute-2)]">{number}</div>
+                      <div className="mt-2 text-[14px] text-[color:var(--color-ink)]">{title}</div>
+                      <div className="mt-1 text-[12px] leading-[1.45] text-[color:var(--color-ink-mute-2)]">{body}</div>
+                    </div>
+                    {index < 2 && <ArrowRight className="hidden md:block w-4 h-4 text-[color:var(--color-brand-primary)]" />}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Page() {
   return (
     <SiteShell>
@@ -54,6 +143,12 @@ function Page() {
         heroVisual={<SummaryHero />}
         overviewTitle="Faster decisions, without losing the audit trail."
         overviewBody="Investigations often involve dozens of events and notes. Bankxio Summaries condenses them into a decision-ready brief that any reviewer or approver can act on in seconds — with a single click to expand the underlying evidence."
+        afterOverview={
+          <>
+            <ProductDepth kind="summaries" />
+            <AITransparency />
+          </>
+        }
         features={[
           { title: "AI summaries", body: "Concise briefs generated from case activity, updated as new events arrive." },
           { title: "Timeline extraction", body: "Key events surfaced automatically with links back to source records." },

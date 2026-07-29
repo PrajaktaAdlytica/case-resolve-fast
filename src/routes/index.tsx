@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import { Play, ChevronRight, IdCard, AlertTriangle, MessageSquare, Timer, Check } from "lucide-react";
+import { Play, ChevronRight, IdCard, AlertTriangle, MessageSquare, Timer, Check, ArrowRight, ShieldCheck, PlugZap, GitPullRequestArrow, CreditCard, Scale, TimerReset } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { GradientMesh } from "@/components/site/GradientMesh";
 import { WorkflowAnimation } from "@/components/site/WorkflowAnimation";
@@ -9,6 +9,8 @@ import { ProductsBento } from "@/components/site/ProductsBento";
 import { DashboardMockup } from "@/components/site/DashboardMockup";
 import { IntegrationDiagram } from "@/components/site/IntegrationDiagram";
 import { CountUp } from "@/components/site/CountUp";
+import { ProductTour } from "@/components/site/ProductTour";
+import { RoiCalculator } from "@/components/site/RoiCalculator";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -21,9 +23,13 @@ function HomePage() {
       <TrustedBy />
       <Problem />
       <Solution />
+      <ProductTour />
       <Products />
       <Dashboard />
       <Integrations />
+      <UseCases />
+      <EnterpriseReadiness />
+      <RoiCalculator />
       <Benefits />
       <Pricing />
       <Statistics />
@@ -42,22 +48,22 @@ function Hero() {
         <div>
           <div className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.12em] text-[color:var(--color-brand-primary-deep)] bg-[color:var(--color-brand-primary-subdued)] px-3 py-1.5 rounded-full">
             <span className="w-1.5 h-1.5 bg-[color:var(--color-brand-primary)] rounded-full" />
-            Operations platform for financial institutions
+            Case and SLA control for regulated finance
           </div>
           <h1 className="mt-6 text-[44px] md:text-[56px] lg:text-[60px] leading-[1.02] font-light text-[color:var(--color-ink)]" style={{ letterSpacing: "-1.6px" }}>
             Resolve compliance cases at operational speed.
           </h1>
           <p className="mt-6 text-[17px] leading-[1.5] text-[color:var(--color-ink-secondary)] max-w-xl">
-            Bankxio helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, customer disputes, complaints and compliance queues from one intelligent operations platform.
+            Bankxio controls the operational journey after an exception, alert, dispute or complaint is created — across the systems fintechs, neobanks, lenders and payment institutions already use.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link to="/request-demo" className="btn-pill btn-primary">Request Demo</Link>
-            <button className="btn-pill btn-secondary"><Play className="w-3.5 h-3.5" /> Watch Platform Tour</button>
+            <a href="#platform-tour" className="btn-pill btn-secondary"><Play className="w-3.5 h-3.5" /> Watch Platform Tour</a>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-6 text-[13px] text-[color:var(--color-ink-mute)]">
-            <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[color:var(--color-brand-primary)]" /> SOC 2 Type II</div>
-            <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[color:var(--color-brand-primary)]" /> ISO 27001</div>
-            <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[color:var(--color-brand-primary)]" /> GDPR aligned</div>
+            <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[color:var(--color-brand-primary)]" /> Role-based controls</div>
+            <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[color:var(--color-brand-primary)]" /> Maker-checker decisions</div>
+            <div className="flex items-center gap-2"><Check className="w-3.5 h-3.5 text-[color:var(--color-brand-primary)]" /> Audit-ready history</div>
           </div>
         </div>
         <div>
@@ -124,10 +130,10 @@ function Solution() {
         <div>
           <div className="text-[11px] uppercase tracking-[0.12em] text-[color:var(--color-brand-primary-deep)] mb-3">The solution</div>
           <h2 className="text-[36px] md:text-[44px] leading-[1.08] font-light text-[color:var(--color-ink)]" style={{ letterSpacing: "-1px" }}>
-            One workspace for every operational case.
+            The operational layer between detection and resolution.
           </h2>
           <p className="mt-5 text-[16px] leading-[1.55] text-[color:var(--color-ink-mute)] max-w-lg">
-            Bankxio centralises case management, AI-generated summaries and SLA monitoring into one unified platform so operations teams can investigate, collaborate and resolve issues faster.
+            Bankxio accepts exceptions and alerts from your existing stack, then controls the human workflow that follows — ownership, evidence, decisions, deadlines and audit history.
           </p>
           <ul className="mt-6 space-y-3">
             {["Unified queue across every case type", "AI summaries surface the next best action", "SLA automation with escalation paths", "Complete audit-ready investigation history"].map((f) => (
@@ -194,6 +200,108 @@ function Integrations() {
           </p>
         </div>
         <IntegrationDiagram />
+        <div className="mt-8 flex justify-center">
+          <Link to="/integrations" className="btn-pill btn-secondary">
+            Explore integration patterns <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function UseCases() {
+  const useCases = [
+    { icon: IdCard, title: "KYC exceptions", body: "Turn verification exceptions into assigned, evidence-linked review work.", href: "/solutions/kyc-exceptions" },
+    { icon: AlertTriangle, title: "Transaction alerts", body: "Move from detection signal to a controlled human disposition.", href: "/solutions/transaction-alerts" },
+    { icon: Scale, title: "Disputes & complaints", body: "Keep evidence, customer communication and deadlines in one case.", href: "/solutions/disputes-complaints" },
+    { icon: CreditCard, title: "Payment institutions", body: "Coordinate compliance, fraud and support around payment exceptions.", href: "/solutions/payment-institutions" },
+    { icon: TimerReset, title: "SLA operations", body: "Make deadlines, escalations and performance explainable at case level.", href: "/solutions/sla-operations" },
+  ];
+  return (
+    <section className="py-24 bg-[color:var(--color-canvas-soft)]">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-3xl">
+          <div className="text-[11px] uppercase tracking-[0.12em] text-[color:var(--color-brand-primary-deep)] mb-3">Use cases</div>
+          <h2 className="text-[36px] md:text-[44px] leading-[1.08] font-light text-[color:var(--color-ink)]" style={{ letterSpacing: "-1px" }}>
+            Start with the workflow creating the most operational drag.
+          </h2>
+          <p className="mt-5 text-[16px] leading-[1.6] text-[color:var(--color-ink-mute-2)] max-w-2xl">
+            Each demo scenario shows how Bankxio connects the trigger, evidence, owner, deadline and resolution without replacing source systems.
+          </p>
+        </div>
+        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {useCases.map((useCase, index) => (
+            <a
+              key={useCase.title}
+              href={useCase.href}
+              className={`rounded-xl border border-[color:var(--color-hairline)] bg-white p-7 hover-lift group ${index === 0 ? "lg:col-span-2" : ""}`}
+            >
+              <div className="flex items-center justify-between gap-4">
+                <span className="w-11 h-11 rounded-xl bg-[color:var(--color-brand-primary-subdued)] flex items-center justify-center">
+                  <useCase.icon className="w-5 h-5 text-[color:var(--color-brand-primary-press)]" />
+                </span>
+                <ArrowRight className="w-4 h-4 text-[color:var(--color-brand-primary)] transition-transform group-hover:translate-x-1" />
+              </div>
+              <h3 className="mt-6 text-[22px] font-light text-[color:var(--color-ink)]">{useCase.title}</h3>
+              <p className="mt-2 text-[14px] leading-[1.6] text-[color:var(--color-ink-mute-2)] max-w-lg">{useCase.body}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function EnterpriseReadiness() {
+  const cards = [
+    {
+      icon: ShieldCheck,
+      eyebrow: "Security",
+      title: "Explain the control model.",
+      body: "Show how access, data boundaries, approvals and audit history support regulated operations.",
+      to: "/security" as const,
+      cta: "Review security",
+    },
+    {
+      icon: PlugZap,
+      eyebrow: "Integrations",
+      title: "Map Bankxio into the existing stack.",
+      body: "Explore example event flows across KYC, AML, payments, support and data systems.",
+      to: "/integrations" as const,
+      cta: "Explore integrations",
+    },
+    {
+      icon: GitPullRequestArrow,
+      eyebrow: "Implementation",
+      title: "Start bounded, then expand.",
+      body: "Follow an illustrative four-stage rollout from workflow discovery to controlled launch.",
+      to: "/implementation" as const,
+      cta: "See the rollout",
+    },
+  ];
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-3xl mb-12">
+          <div className="text-[11px] uppercase tracking-[0.12em] text-[color:var(--color-brand-primary-deep)] mb-3">Enterprise readiness · Demo</div>
+          <h2 className="text-[36px] md:text-[44px] leading-[1.08] font-light text-[color:var(--color-ink)]" style={{ letterSpacing: "-1px" }}>
+            Give every buyer a clear next question to answer.
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {cards.map((card) => (
+            <Link key={card.title} to={card.to} className="rounded-xl border border-[color:var(--color-hairline)] p-7 hover-lift group">
+              <card.icon className="w-5 h-5 text-[color:var(--color-brand-primary)]" />
+              <div className="mt-6 text-[10px] uppercase tracking-[0.1em] text-[color:var(--color-brand-primary-deep)]">{card.eyebrow}</div>
+              <h3 className="mt-3 text-[22px] leading-[1.25] font-light text-[color:var(--color-ink)]">{card.title}</h3>
+              <p className="mt-3 text-[13px] leading-[1.6] text-[color:var(--color-ink-mute-2)]">{card.body}</p>
+              <div className="mt-6 flex items-center gap-2 text-[12px] text-[color:var(--color-brand-primary-deep)]">
+                {card.cta} <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
