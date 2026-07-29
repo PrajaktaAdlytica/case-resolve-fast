@@ -168,7 +168,9 @@
     -webkit-font-smoothing: antialiased;
     color: var(--color-ink);
   }
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @utility tnum {
@@ -194,21 +196,32 @@
 @utility btn-primary {
   background: var(--color-brand-primary);
   color: #ffffff;
-  &:hover { background: var(--color-brand-primary-deep); transform: translateY(-1px); }
-  &:active { background: var(--color-brand-primary-press); }
+  &:hover {
+    background: var(--color-brand-primary-deep);
+    transform: translateY(-1px);
+  }
+  &:active {
+    background: var(--color-brand-primary-press);
+  }
 }
 
 @utility btn-secondary {
   background: transparent;
   color: var(--color-ink);
   border: 1px solid var(--color-hairline);
-  &:hover { border-color: var(--color-brand-primary); color: var(--color-brand-primary); }
+  &:hover {
+    border-color: var(--color-brand-primary);
+    color: var(--color-brand-primary);
+  }
 }
 
 @utility btn-on-dark {
   background: #ffffff;
   color: var(--color-brand-dark-900);
-  &:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
+  &:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-1px);
+  }
 }
 
 @utility gradient-mesh {
@@ -222,10 +235,15 @@
 }
 
 @utility hover-lift {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0,55,112,0.08), 0 2px 6px rgba(0,55,112,0.04);
+    box-shadow:
+      0 12px 32px rgba(0, 55, 112, 0.08),
+      0 2px 6px rgba(0, 55, 112, 0.04);
     border-color: var(--color-brand-primary) !important;
   }
 }
@@ -237,26 +255,84 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 @utility animate-marquee {
   animation: marquee 35s linear infinite;
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.4); }
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.4);
+  }
 }
 @utility animate-pulse-dot {
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
+@keyframes bankxio-scene-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.bankxio-scene-progress {
+  animation-name: bankxio-scene-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  transform-origin: left center;
+}
+
 @keyframes flow-line {
-  0% { stroke-dashoffset: 100; }
-  100% { stroke-dashoffset: 0; }
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 @utility animate-flow-line {
   stroke-dasharray: 6 6;
   animation: flow-line 2.5s linear infinite;
+}
+
+@keyframes bankxio-motion-copy-in {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.bankxio-motion-copy {
+  animation: bankxio-motion-copy-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bankxio-motion-video {
+    display: none;
+  }
+
+  .bankxio-motion-copy {
+    animation: none;
+  }
 }

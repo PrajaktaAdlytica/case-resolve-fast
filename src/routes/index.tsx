@@ -11,6 +11,7 @@ import { IntegrationDiagram } from "@/components/site/IntegrationDiagram";
 import { CountUp } from "@/components/site/CountUp";
 import { ProductTour } from "@/components/site/ProductTour";
 import { RoiCalculator } from "@/components/site/RoiCalculator";
+import { MotionEntry } from "@/components/site/MotionEntry";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -19,6 +20,7 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return (
     <SiteShell>
+      <MotionEntry />
       <Hero />
       <TrustedBy />
       <Problem />
@@ -42,7 +44,7 @@ function HomePage() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section id="bankxio-home" className="relative overflow-hidden scroll-mt-[68px]">
       <GradientMesh className="h-[80vh]" />
       <div className="relative max-w-[1200px] mx-auto px-6 pt-16 pb-24 grid lg:grid-cols-[1.05fr_1fr] gap-14 items-center">
         <div>
