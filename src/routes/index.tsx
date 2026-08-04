@@ -39,6 +39,7 @@ function HomePage() {
       <MotionEntry />
       <Hero />
       <TrustedBy />
+      <FundingAnnouncement />
       <Problem />
       <Solution />
       <ProductTour />
@@ -51,7 +52,6 @@ function HomePage() {
       <Benefits />
       <Pricing />
       <Statistics />
-      <FundingAnnouncement />
       <Testimonial />
       <FAQ />
       <FinalCTA />
