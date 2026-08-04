@@ -16,6 +16,7 @@ import { Route as IntegrationsRouteImport } from './routes/integrations'
 import { Route as RequestDemoRouteImport } from './routes/request-demo'
 import { Route as SecurityRouteImport } from './routes/security'
 import { Route as SigninRouteImport } from './routes/signin'
+import { Route as NewsFundingAnnouncementRouteImport } from './routes/news.funding-announcement'
 import { Route as ProductsCasesRouteImport } from './routes/products.cases'
 import { Route as ProductsSlaRouteImport } from './routes/products.sla'
 import { Route as ProductsSummariesRouteImport } from './routes/products.summaries'
@@ -56,6 +57,11 @@ const SigninRoute = SigninRouteImport.update({
   path: '/signin',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NewsFundingAnnouncementRoute = NewsFundingAnnouncementRouteImport.update({
+  id: '/news/funding-announcement',
+  path: '/news/funding-announcement',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductsCasesRoute = ProductsCasesRouteImport.update({
   id: '/products/cases',
   path: '/products/cases',
@@ -85,6 +91,7 @@ export interface FileRoutesByFullPath {
   '/request-demo': typeof RequestDemoRoute
   '/security': typeof SecurityRoute
   '/signin': typeof SigninRoute
+  '/news/funding-announcement': typeof NewsFundingAnnouncementRoute
   '/products/cases': typeof ProductsCasesRoute
   '/products/sla': typeof ProductsSlaRoute
   '/products/summaries': typeof ProductsSummariesRoute
@@ -98,6 +105,7 @@ export interface FileRoutesByTo {
   '/request-demo': typeof RequestDemoRoute
   '/security': typeof SecurityRoute
   '/signin': typeof SigninRoute
+  '/news/funding-announcement': typeof NewsFundingAnnouncementRoute
   '/products/cases': typeof ProductsCasesRoute
   '/products/sla': typeof ProductsSlaRoute
   '/products/summaries': typeof ProductsSummariesRoute
@@ -112,6 +120,7 @@ export interface FileRoutesById {
   '/request-demo': typeof RequestDemoRoute
   '/security': typeof SecurityRoute
   '/signin': typeof SigninRoute
+  '/news/funding-announcement': typeof NewsFundingAnnouncementRoute
   '/products/cases': typeof ProductsCasesRoute
   '/products/sla': typeof ProductsSlaRoute
   '/products/summaries': typeof ProductsSummariesRoute
@@ -127,6 +136,7 @@ export interface FileRouteTypes {
     | '/request-demo'
     | '/security'
     | '/signin'
+    | '/news/funding-announcement'
     | '/products/cases'
     | '/products/sla'
     | '/products/summaries'
@@ -140,6 +150,7 @@ export interface FileRouteTypes {
     | '/request-demo'
     | '/security'
     | '/signin'
+    | '/news/funding-announcement'
     | '/products/cases'
     | '/products/sla'
     | '/products/summaries'
@@ -153,6 +164,7 @@ export interface FileRouteTypes {
     | '/request-demo'
     | '/security'
     | '/signin'
+    | '/news/funding-announcement'
     | '/products/cases'
     | '/products/sla'
     | '/products/summaries'
@@ -167,6 +179,7 @@ export interface RootRouteChildren {
   RequestDemoRoute: typeof RequestDemoRoute
   SecurityRoute: typeof SecurityRoute
   SigninRoute: typeof SigninRoute
+  NewsFundingAnnouncementRoute: typeof NewsFundingAnnouncementRoute
   ProductsCasesRoute: typeof ProductsCasesRoute
   ProductsSlaRoute: typeof ProductsSlaRoute
   ProductsSummariesRoute: typeof ProductsSummariesRoute
@@ -224,6 +237,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SigninRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/news/funding-announcement': {
+      id: '/news/funding-announcement'
+      path: '/news/funding-announcement'
+      fullPath: '/news/funding-announcement'
+      preLoaderRoute: typeof NewsFundingAnnouncementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/products/cases': {
       id: '/products/cases'
       path: '/products/cases'
@@ -263,6 +283,7 @@ const rootRouteChildren: RootRouteChildren = {
   RequestDemoRoute: RequestDemoRoute,
   SecurityRoute: SecurityRoute,
   SigninRoute: SigninRoute,
+  NewsFundingAnnouncementRoute: NewsFundingAnnouncementRoute,
   ProductsCasesRoute: ProductsCasesRoute,
   ProductsSlaRoute: ProductsSlaRoute,
   ProductsSummariesRoute: ProductsSummariesRoute,
