@@ -78,16 +78,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Bankxio — Operations platform for fintechs and neobanks" },
-      { name: "description", content: "Bankxio helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, disputes and compliance cases from one intelligent operations platform." },
+      {
+        name: "description",
+        content:
+          "Bankxio helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, disputes and compliance cases from one intelligent operations platform.",
+      },
       { name: "author", content: "Bankxio" },
       { property: "og:title", content: "Bankxio — Operations platform for fintechs and neobanks" },
-      { property: "og:description", content: "Bankxio helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, disputes and compliance cases from one intelligent operations platform." },
+      {
+        property: "og:description",
+        content:
+          "Bankxio helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, disputes and compliance cases from one intelligent operations platform.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Bankxio — Operations platform for fintechs and neobanks" },
-      { name: "twitter:description", content: "Bankxio helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, disputes and compliance cases from one intelligent operations platform." },
-      { property: "og:image", content: "https://case-resolve-fast.vercel.app/bankxio-favicon.svg?v=bankxio-clean" },
-      { name: "twitter:image", content: "https://case-resolve-fast.vercel.app/bankxio-favicon.svg?v=bankxio-clean" },
+      {
+        name: "twitter:description",
+        content:
+          "Bankxio helps fintechs, neobanks, lenders and payment institutions manage KYC exceptions, transaction alerts, disputes and compliance cases from one intelligent operations platform.",
+      },
+      {
+        property: "og:image",
+        content: "https://case-resolve-fast.vercel.app/bankxio-favicon.svg?v=bankxio-clean",
+      },
+      {
+        name: "twitter:image",
+        content: "https://case-resolve-fast.vercel.app/bankxio-favicon.svg?v=bankxio-clean",
+      },
     ],
     links: [
       {
@@ -98,7 +116,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "shortcut icon", href: "/favicon.ico?v=bankxio-clean", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -108,10 +129,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Bankxio",
+    url: "https://bankxio.com",
+    sameAs: [
+      "https://www.linkedin.com/company/bankxio/",
+      "https://www.crunchbase.com/organization/bankxio",
+    ],
+  };
+
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body>
         {children}
