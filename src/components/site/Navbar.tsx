@@ -143,6 +143,12 @@ export function Navbar() {
               Pricing
             </Link>
             <Link
+              to="/news/funding-announcement"
+              className="hover:text-[color:var(--color-brand-primary)] transition-colors"
+            >
+              Funding
+            </Link>
+            <Link
               to="/about"
               className="hover:text-[color:var(--color-brand-primary)] transition-colors"
             >
@@ -206,6 +212,13 @@ export function Navbar() {
                 onClick={() => setMobile(false)}
               >
                 Pricing
+              </Link>
+              <Link
+                to="/news/funding-announcement"
+                className="block rounded-lg px-3 py-2"
+                onClick={() => setMobile(false)}
+              >
+                Funding
               </Link>
               <Link
                 to="/about"
